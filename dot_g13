@@ -1,0 +1,24 @@
+rgb 175 143 233
+
+bind G1 ESC
+bind G2 TAB
+bind G3 Q
+bind G4 W
+bind G5 E
+bind G6 R
+bind G7 T
+bind G8 0
+bind G9 0
+bind G10 A
+bind G11 S
+bind G12 D
+bind G13 F
+bind G14 G
+bind G15 LEFTSHIFT
+bind G16 Z
+bind G17 X
+bind G18 C
+bind G19 V
+bind G20 LEFTCTRL
+bind G21 LEFTALT
+bind G22 SPACE
