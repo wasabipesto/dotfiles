@@ -1,0 +1,53 @@
+# updates & upgrades
+alias up="sudo apt update && sudo apt upgrade -y"
+
+# connections
+nodes="meriadoc celebrimbor ereinion kosala"
+for n in ${nodes}; do
+  l=${n::1}
+  alias ss${l}="ssh justin@${n}.raccoon-velociraptor.ts.net"
+  alias mnt-${l}="sshfs ${n}.raccoon-velociraptor.ts.net:/ /mnt/${n} -C"
+done
+
+# nice colors for readability
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
+
+# prompt before removing more than three files, or when removing recursively
+alias rm="rm -I"
+
+# create folders recursively
+alias mkdir="mkdir -p"
+
+# make disk-free human-readable
+alias df="df -h"
+
+# show details on all files in a directory
+alias ll="ls -alF"
+
+# scan your bash history
+#alias history="history | grep ${1:-''}"
+
+# ping -> mtr
+alias ping="mtr"
+
+# get your external ip
+alias myip="curl ifconfig.me"
+
+# see open ports
+#alias ports="sudo ss -tulpn"
+
+# apt hints
+alias apt-sources="sudo nano /etc/apt/sources.list"
+alias apt-search="apt-cache --names-only search"
+alias apt-info="apt-cache showpkg"
+
+# docker hints
+alias dc-up="docker compose -f /opt/valinor/$( hostname )-compose.yml up -d $1"
+alias dc-down="docker compose -f /opt/valinor/$( hostname )-compose.yml down $1"
+alias dc-logs="docker compose -f /opt/valinor/$( hostname )-compose.yml logs $1"
+alias dc-edit="nano /opt/valinor/$( hostname )-compose.yml"
+alias dc-config="docker compose -f /opt/valinor/$( hostname )-compose.yml config"
+alias dc-restart="docker compose -f /opt/valinor/$( hostname )-compose.yml restart $1"
+alias dc-pull="docker compose -f /opt/valinor/$( hostname )-compose.yml pull $1"
+alias dc-sync="cd /opt/valinor; git pull"
