@@ -1,5 +1,8 @@
 # updates & upgrades
 alias up="sudo apt update && sudo apt upgrade -y"
+alias up-everything="up && \
+  chezmoi update && \
+  dc-sync && dc-pull && dc-up"
 
 # connections
 nodes="meriadoc celebrimbor ereinion kosala"
