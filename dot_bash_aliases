@@ -32,6 +32,7 @@ alias ll="ls -alF"
 #alias history="history | grep ${1:-''}"
 
 # ping -> mtr
+# (use ping4 and ping6 for basic ping)
 alias ping="mtr"
 
 # get your external ip
