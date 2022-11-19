@@ -1,0 +1,12 @@
+[Unit]
+Description=Logitech G13 Driver
+After=syslog.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/g13
+ExecStart=/opt/g13/g13d --config /home/justin/.g13
+
+[Install]
+WantedBy=multi-user.target
