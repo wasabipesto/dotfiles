@@ -1,7 +1,7 @@
 # updates & upgrades
 alias up="sudo apt update && sudo apt upgrade -y"
 alias up-everything="up && \
-  chezmoi update && \
+  chezmoi update && chezmoi apply && \
   dc-sync && dc-pull && dc-up"
 
 # connections
