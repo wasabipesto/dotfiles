@@ -12,6 +12,9 @@ for n in ${tsnodes}; do
   alias mnt-${l}="sshfs ${n}.raccoon-velociraptor.ts.net:/ /mnt/${n} -C"
 done
 
+# grab the syslog
+alias syslog="sudo tail -n500 /var/log/syslog"
+
 # nice colors for readability
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
