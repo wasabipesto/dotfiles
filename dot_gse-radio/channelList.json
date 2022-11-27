@@ -1,0 +1,17 @@
+{ "channels":[
+	{
+	"id": "2b8bad4e-42d7-49a6-9a46-a68e17b8ac87",
+	"name": "Groove Salad",
+	"address": "https://ice4.somafm.com/groovesalad-128-aac",
+	"favourite": true,
+	"encoding": false
+}
+],
+
+  "lastplayed":{
+	"id": "2b8bad4e-42d7-49a6-9a46-a68e17b8ac87",
+	"name": "Groove Salad",
+	"address": "https://ice4.somafm.com/groovesalad-128-aac",
+	"encoding": false
+}
+}
