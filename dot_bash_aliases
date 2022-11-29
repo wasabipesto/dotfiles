@@ -5,7 +5,7 @@ alias up-everything="up && \
   dc-sync && dc-pull && dc-up"
 
 # connections
-tsnodes="celebrimbor demoux ereinion kosala"
+tsnodes="celebrimbor demoux ereinion kalak"
 for n in ${tsnodes}; do
   l=${n::1}
   alias ss${l}="ssh justin@${n}.raccoon-velociraptor.ts.net"
