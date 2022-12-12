@@ -12,7 +12,7 @@ for n in ${tsnodes}; do
   alias mnt-${l}="sshfs ${n}.raccoon-velociraptor.ts.net:/ /mnt/${n} -C"
 done
 
-alias uptimes="for node in $tsnodes; do echo -n $node ; ssh $node uptime; done"
+#alias uptimes="for node in $tsnodes; do echo -n $node ; ssh $node uptime; done"
 
 # grab the syslog
 alias syslog="sudo tail -n500 /var/log/syslog"
