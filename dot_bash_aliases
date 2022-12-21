@@ -33,9 +33,6 @@ alias df="df -h"
 # show details on all files in a directory
 alias ll="ls -alF"
 
-# scan your bash history
-#alias history="history | grep ${1:-''}"
-
 # ping -> mtr
 # (use ping4 and ping6 for basic ping)
 alias ping="mtr"
@@ -60,3 +57,19 @@ alias dc-config="docker compose -f /opt/valinor/$( hostname )-compose.yml config
 alias dc-restart="docker compose -f /opt/valinor/$( hostname )-compose.yml restart $1"
 alias dc-pull="docker compose -f /opt/valinor/$( hostname )-compose.yml pull $1"
 alias dc-sync="cd /opt/valinor; git pull"
+
+# advanced bash history
+promptFunc() {
+  echo "$(date +%Y-%m-%d--%H-%M-%S) $(hostname) $PWD $(history 1)" \
+    >> ~/.full_history
+}
+PROMPT_COMMAND=promptFunc
+
+function histgrep {
+  local n_lines=1000
+  if [[ "$1" =~ ^[0-9]*$ ]]; then
+    n_lines="$1"
+    shift
+  fi
+  grep "$@" ~/.full_history | tail -n "$n_lines"
+}
