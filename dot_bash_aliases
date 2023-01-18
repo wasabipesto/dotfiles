@@ -56,6 +56,7 @@ alias dc-edit="nano /opt/valinor/$( hostname )-compose.yml"
 alias dc-config="docker compose -f /opt/valinor/$( hostname )-compose.yml config"
 alias dc-restart="docker compose -f /opt/valinor/$( hostname )-compose.yml restart $1"
 alias dc-pull="docker compose -f /opt/valinor/$( hostname )-compose.yml pull $1"
+alias dc-build="docker compose -f /opt/valinor/$( hostname )-compose.yml build $1"
 alias dc-sync="cd /opt/valinor; git pull"
 
 # advanced bash history
