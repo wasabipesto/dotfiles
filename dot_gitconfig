@@ -1,3 +1,6 @@
 [user]
 	name = wasabipesto
 	email = 21313833+wasabipesto@users.noreply.github.com
+[init]
+	defaultBranch = main
+
