@@ -8,8 +8,8 @@ alias up-everything="up && \
 tsnodes="celebrimbor demoux kalak pailiah"
 for n in ${tsnodes}; do
   l=${n::1}
-  alias ss${l}="ssh justin@${n}.raccoon-velociraptor.ts.net"
-  alias mnt-${l}="sshfs ${n}.raccoon-velociraptor.ts.net:/ /mnt/${n} -C"
+  alias ss${l}="ssh justin@${n}.neon-locrian.ts.net"
+  alias mnt-${l}="sshfs ${n}.neon-locrian.ts.net:/ /mnt/${n} -C"
 done
 
 #alias uptimes="for node in $tsnodes; do echo -n $node ; ssh $node uptime; done"
