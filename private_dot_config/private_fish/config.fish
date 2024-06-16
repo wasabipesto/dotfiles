@@ -13,7 +13,7 @@ end
 alias syslog="sudo tail -n500 /var/log/syslog"
 
 # show details on all files in a directory
-alias ll="ls -lFh"
+alias ll="ls -alFh"
 
 # color highlighting to grep output
 alias grep='grep --color=auto'
