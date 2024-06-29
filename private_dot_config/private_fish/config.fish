@@ -10,7 +10,7 @@ for n in demoux celebrimbor pailiah
 end
 
 # grab the syslog
-alias syslog="sudo tail -n500 /var/log/syslog"
+alias syslog="sudo journalctl -n 500 -f"
 
 # show details on all files in a directory
 alias ll="ls -alFh"
