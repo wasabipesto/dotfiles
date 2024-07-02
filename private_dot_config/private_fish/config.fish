@@ -3,7 +3,7 @@ alias up="sudo apt update && sudo apt upgrade -y"
 alias up-everything="up; chezmoi update -v; dc-sync"
 
 # connections
-for n in demoux celebrimbor pailiah
+for n in amuna demoux celebrimbor pailiah
   set l (echo $n | cut -c1)
   alias "ss$l=ssh justin@$n.neon-locrian.ts.net"
   alias "mnt-$l=sshfs $n.neon-locrian.ts.net:/ /mnt/$n -C"
